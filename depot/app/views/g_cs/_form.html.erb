@@ -1,0 +1,17 @@
+<%= form_for(@gc) do |f| %>
+  <% if @gc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gc.errors.count, "error") %> prohibited this gc from being saved:</h2>
+
+      <ul>
+      <% @gc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

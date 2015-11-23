@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gcs.each do |gc| %>
+      <tr>
+        <td><%= link_to 'Show', gc %></td>
+        <td><%= link_to 'Edit', edit_gc_path(gc) %></td>
+        <td><%= link_to 'Destroy', gc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gc', new_gc_path %>
